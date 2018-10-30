@@ -1,0 +1,31 @@
+{% extends "assetmanager/base.html" %}
+
+{% block content %}
+
+<blockquote>
+        <h3> Deleting Asset</h3>
+</blockquote>
+
+<div class="col-sm-9">
+
+    <h4>Are you sure you want to delete this Asset?</h4>
+
+    <form action="" method="POST">
+
+            {% csrf_token %}
+
+            <fieldset class="form-group">
+
+                   
+            </fieldset>
+            
+
+            <button class="btn btn-outline-danger btn-danger" type="submit">Yes, Delete</button>
+            <a class="btn btn-outline-secondary btn-primary" id ="cancelbtn" href="{% url 'asset-index' %}">Cancel</a>
+            <br>
+          
+    </form>
+</div>
+
+
+{% endblock content %}

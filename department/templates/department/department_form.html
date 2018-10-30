@@ -1,0 +1,33 @@
+{% extends "assetmanager/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<button onclick="goBack()" class="btn btn-default">Go Back</button>
+        <h1>Add Department</h1>
+        <a href="{% url 'all-departments' %}" class="btn btn-info pull-right">View all departments</a>
+        <br><br>
+  
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Department Form
+            </div>
+
+            <div class="panel-body">
+                    <form action="" method="POST">
+
+                            {% csrf_token %}
+            
+                            <fieldset class="form-group">
+            
+                                    
+                            </fieldset>
+                            {{ form|crispy}}
+            
+                            <button class="btn btn-default" type="submit">Submit</button>
+                            <br>
+                          
+                    </form>
+            </div>
+        </div>
+       
+{% endblock content %}

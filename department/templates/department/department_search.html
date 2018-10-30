@@ -1,0 +1,51 @@
+
+
+
+
+
+
+{% extends "assetmanager/base.html" %}
+
+        {% block content %}
+        
+        <h1><i class="fa fa-briefcase"></i> Search Result</h1>
+        
+      
+        <br> <br>
+        
+        <div class="col-sm-4" style="padding:0">
+        
+                <form id="searchform" action="{% url 'search-departments' %}" method="get" accept-charset="utf-8">
+                        
+                        <input class="form-control" id="searchbox" name="q" type="text" placeholder="Search" value="{{q}}">
+                       
+                      </form>
+        </div>
+        <div class="col-sm-8"></div>
+        <div class="col-sm-12" style="padding:0">
+
+        {% if results.count > 0 %}
+        
+
+        {% for result in results %}
+           <div class="alert alert-info">
+                <a href="{% url 'department-detail' result.id %}"> <i class="fa fa-briefcase"></i> {{ result.department_name}}</a>
+           </div>
+            <hr>
+           
+        {% endfor %}
+        {% else %}
+        <div class="alert alert-danger">
+            No results found
+        </div>
+
+
+        {% endif %}
+
+        
+        
+  
+        </div>
+        
+        
+        {% endblock content %}

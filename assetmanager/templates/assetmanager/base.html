@@ -1,0 +1,194 @@
+<html>
+
+    <head>
+      <title>Asset Manager</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title></title>
+
+    <!-- Ico -->
+    <link rel="icon" type="image/ico" href="../../static/img/lappy.png" />
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- <script src="../../static/js/script.js"></script> -->
+<script type="text/javascript" src="../../static/js/script.js"></script>
+
+<!-- Ck editor -->
+<script src="https://cdn.ckeditor.com/4.10.1/standard/ckeditor.js"></script>
+
+<!-- font-awesome -->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+<!-- Custom css below -->
+<!-- <link rel="stylesheet" href="../static/assetmanager/main.css"> -->
+<link rel="stylesheet" href="../../static/assetmanager/main.css">
+</head>
+  <body>
+    
+    <div class="container-fluid" style="">
+      
+
+      <div class="row">
+
+          <div class="">
+           
+             
+
+<div class="container-fluid" id="nav-bar">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="col-sm-3" id="logo">
+                <h3><img src="../../static/img/3.png" alt="" style="width:25px;height:25px;border-radius: 50%;"> Asset Manager</h3>
+            </div>
+<div class="col-sm-7" id="nav-links">
+
+    <span id="spandropdown">
+            <a href="" class="dropdown-trigger"> <i class="fas fa-bell"></i> <span class="badge">23</span></a>
+            <div id="dropdown">
+                <div id="dropdown-heading">
+                    Notifications
+                </div>
+                   <a href="">
+                       <strong>ICT Department</strong> <br>
+                       Complain on asset 0187176 - Laptop <br>
+                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Parit qui natus minima...
+                   </a>
+                   <a href="">
+                    <strong>ICT Department</strong> <br>
+                    Complain on asset 0187176 - Laptop <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Parit qui natus minima...
+                </a>
+                <a href="">
+                    <strong>ICT Department</strong> <br>
+                    Complain on asset 0187176 - Laptop <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Parit qui natus minima...
+                </a>
+                <a href="">
+                    <strong>ICT Department</strong> <br>
+                    Complain on asset 0187176 - Laptop <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Parit qui natus minima...
+                </a>
+                <a href="">
+                    <strong>ICT Department</strong> <br>
+                    Complain on asset 0187176 - Laptop <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Parit qui natus minima...
+                </a>
+                <a href="">
+                    <strong>ICT Department</strong> <br>
+                    Complain on asset 0187176 - Laptop <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Parit qui natus minima...
+                </a>
+                    </div>
+    </span>
+   
+
+
+   <a href=""><i class="fas fa-bell"></i> <span class="badge">23</span></a>
+</div>
+
+            <div class="col-sm-2" id="nav-user">
+                <span id="profile-span">
+                    Albert Daniel   <img src="../../static/img/0.jpg" alt="">
+               </span>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-sm-2" id="side-nav-div">
+    <div id="side-nav">
+        <a href="" class="active"><i class="fa fa-dashboard"></i> Dashboard</a>
+        <a href="#"><i class="fa fa-desktop"></i> Assets <span class="caret"></span></a>
+
+        <div id="assets-dropdown">
+            <a href="{% url 'asset-index' %}"><i class="fa fa-chevron-circle-right"></i> All Assets</a>
+            <a href=""> <i class="fa fa-chevron-circle-right"></i>Desktop <span class="badge">17299</span></a>
+            <a href=""> <i class="fa fa-chevron-circle-right"></i>Keyboard <span class="badge">172</span></a>
+            <a href=""> <i class="fa fa-chevron-circle-right"></i>CPU <span class="badge">2077</span></a>
+            <a href=""> <i class="fa fa-chevron-circle-right"></i>Laptop <span class="badge">2755</span></a>
+           
+            <a href=""> <i class="fa fa-chevron-circle-right"></i>UPS</a>
+        </div>
+        <a href="{% url 'assetname-index' %}"><i class="fa fa-plus"></i> Type of assets</a>
+        <a href="{% url 'asset-create' %}"><i class="fa fa-plus"></i> Store Asset</a>
+        <a href="{% url 'department-create'%}"><i class="fa fa-plus"></i>Add Department</a>
+        <a href=""><i class="fa fa-cogs"></i> System Setting</a>
+        <a href="{% url 'all-departments' %}"><i class="fa fa-briefcase"></i> Departments <span class="caret"></span></a>
+        <form id="searchform" action="{% url 'search-departments' %}" method="get" accept-charset="utf-8" style="margin-bottom:-1px;padding:10px;">
+                
+            <input class="form-control" id="searchbox" name="q" type="text" placeholder="Search" style="height:30px;">
+           
+          </form>
+        <div id="departments-dropdown">
+                
+                <a href="{% url 'all-departments' %}"><i class="fa fa-bullseye"></i>All</a>
+
+                
+                {% for department in alldeps %}
+
+                <a href="{% url 'department-detail' department.pk %}"><i class="fa fa-bullseye"></i>
+                    {{department.department_name}}
+                </a>
+                
+        
+                {% endfor%}
+
+
+          
+           
+        
+        </div>
+        <a href=""><i class="fa fa-database"></i> Backup Database</a>
+       
+        <hr>
+
+        <span id="credits">
+                            Software By Albert
+                        </span>
+
+    </div>
+</div>
+            
+            <div class="col-sm-10" id="right-side-div">
+
+                    {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+          
+                      {{ message }}
+                    </div>
+          
+          
+                    {% endfor %}
+          
+                    {% endif %}
+
+                <div class="main">
+                        {% block content %}{% endblock %}
+                </div>
+             
+            </div>
+          </div>
+      </div>
+    </div>
+    
+
+    <script>
+			CKEDITOR.replace( 'asset_specification' );
+        </script>
+        
+        
+  </body>
+</html>

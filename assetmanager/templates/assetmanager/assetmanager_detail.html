@@ -1,0 +1,54 @@
+{% extends "assetmanager/base.html" %}
+
+{% block content %}
+
+<button onclick="goBack()" class="btn btn-default">Go Back</button>
+
+<blockquote>
+        <h3 class=""> Serial Number: <strong>{{object.asset_serial_number}}</strong> | <i>{{object.asset_name}}</i></h3>
+</blockquote>
+
+<div class="col-sm-9">
+<div class="alert alert-info">
+    Assigned to {{object.department_assigned}} <a href="{% url 'department-detail' object.department_assigned_id %}" class="btn btn-success btn-xs">View</a>
+</div>
+
+
+<div class="panel panel-info">
+    <div class="panel-heading">
+        Asset Description
+    </div>
+    <div class="panel panel-body">
+        <table class="table">
+
+            <th>
+                Asset Brand
+            </th>
+
+            <th>Asset Specs</th>
+            <th>Date Assigned</th>
+            <th>Assigned By</th>
+            <tr>
+                <td>{{object.asset_brand}}</td>
+                <td>{{object.asset_specification|safe}}</td>
+                <td>{{object.date_added}}</td>
+                <td>{{object.assignee}}</td>
+            </tr>
+        </table>
+    
+        </div>
+
+                        
+                      
+</div>
+<a href="{% url 'asset-delete' object.id %}" type="button" class="btn btn-danger btn-sm">Delete</a>
+<a href="{% url 'asset-update' object.id %}" type="button" class="btn btn-primary btn-sm">Edit</a>
+
+
+
+</div>
+<div class="col-sm-3" id="dep-details">
+
+</div>
+
+{% endblock content %}

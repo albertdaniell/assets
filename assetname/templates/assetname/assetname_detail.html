@@ -1,0 +1,95 @@
+{% extends "assetmanager/base.html" %}
+
+{% block content %}
+
+<button onclick="goBack()" class="btn btn-default">Go Back</button>
+
+<blockquote>
+        <h3>Device Type: <span id="dep-name">  {{assetname.asset_type}}</span> </h3>
+</blockquote>
+
+
+<div class="col-sm-9">
+    
+    
+    
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            Assets
+        </div>
+        <div class="panel-body">
+
+            {% if assets.count > 0 %}
+            <table class="table table-condenced table-stripped table-hover" style="">
+
+                    
+                    <th>#</th>
+                    <th>Asset Name</th>
+                    <th>Asset Brand</th>
+                    <th>Department Assigned</th>
+                    
+                    <!-- <th>Assigned by</th> -->
+                    <th></th>
+
+                    
+        
+                    {% for asset in assets %}
+                    <tr>
+                        
+                        <td>{{asset.asset_serial_number}}</td>
+                        <td><a href="{% url 'asset-detail' asset.id %}">{{asset.asset_name}}</a> </td>
+                        <td>{{asset.asset_brand}}</td>
+                        <td>{{asset.department_assigned}}</td>
+                        <!-- <td>{{asset.date_added |date:"F d, Y"}}</td> -->
+                        <!-- <td><span class="badge">{{asset.assignee}}</span></td> -->
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <a href="{% url 'asset-delete' asset.id %}" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                <a href="{% url 'asset-update' asset.id %}" type="button" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></a>
+                                <a href="{% url 'asset-detail' asset.id %}" type="button" class="btn btn-default btn-sm"><i class="fas fa-eye"></i></a>
+                                
+                              </div>
+                        </td>
+                    </tr>
+        
+                    {% endfor %}
+                    {% else %}
+                    <div class="alert alert-danger">
+                            No Assets
+                        </div>
+                    {% endif %}
+        
+                   
+                    
+                </table>
+
+
+       
+        
+    </div>
+    
+                            
+                          
+    </div>
+    <a href="{% url 'asset-delete' assetname.id %}" type="button" class="btn btn-danger btn-sm">Delete</a>
+    <a href="{% url 'asset-update' assetname.id %}" type="button" class="btn btn-primary btn-sm">Edit</a>
+    
+    
+    
+    </div>
+
+    <div class="col-sm-3">
+       <h4> Departments with is Device</h4>
+       <hr>
+        {% for depassets in depass%}
+        <a href="{% url 'department-detail' depassets.department_assigned.id %}">
+        
+        {{depassets.department_assigned}}
+        </a><br><br>
+
+        {% endfor %}
+    </div>
+
+
+
+{% endblock content %}

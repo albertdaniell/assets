@@ -1,0 +1,83 @@
+{% extends "assetmanager/base.html" %}
+
+{% block content %}
+
+<button onclick="goBack()" class="btn btn-default">Go Back</button>
+
+<blockquote>
+        <h3> <span id="dep-name">{{department.department_name}}</span> Department</h3>
+        <div class="" id="dep-details">
+    <span class="badge"><h5>Department ID: {{department.id}}</h5></span>
+    <span class="badge"><h5>Department floor: {{department.department_floor}}</h5></span>
+    <span class="badge"><h5>Department Head: {{department.department_head}} <button class="btn btn-success btn-xs"><i class="fa fa-eye"></i></button> </h5></span>
+    <span class="badge"><h5>Assigned by: {{department.assignee}}</h5></span>
+</div>
+</blockquote>
+
+
+
+<div class="col-sm-12" style="margin:20px 0px">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Devices in This department
+
+        </div>
+
+        <div class="panel-body">
+
+                {% if assets.count > 0 %}
+                <table class="table table-condenced table-stripped table-hover" style="">
+
+                        <th></th>
+                        <th>#</th>
+                        <th>Asset Name</th>
+                        <th>Asset Brand</th>
+                        <th>Asset Specs</th>
+                        <th>Department Assigned</th>
+                        
+                        <!-- <th>Assigned by</th> -->
+                        <th></th>
+
+                        
+            
+                        {% for asset in assets %}
+                        <tr>
+                            <td><i class="fa fa-laptop"></i></td>
+                            <td>{{asset.asset_serial_number}}</td>
+                            <td><a href="{% url 'asset-detail' asset.id %}">{{asset.asset_name}}</a> </td>
+                            <td>{{asset.asset_brand}}</td>
+                            <td>{{asset.asset_specification | truncatewords:10|safe}}</td>
+                            <td>{{asset.department_assigned}}</td>
+                            <!-- <td>{{asset.date_added |date:"F d, Y"}}</td> -->
+                            <!-- <td><span class="badge">{{asset.assignee}}</span></td> -->
+                            <td>
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <a href="{% url 'asset-delete' asset.id %}" type="button" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                    <a href="{% url 'asset-update' asset.id %}" type="button" class="btn btn-primary btn-sm"><i class="fas fa-pen"></i></a>
+                                    <a href="{% url 'asset-detail' asset.id %}" type="button" class="btn btn-default btn-sm"><i class="fas fa-eye"></i></a>
+                                    
+                                  </div>
+                            </td>
+                        </tr>
+            
+                        {% endfor %}
+                        {% else %}
+                        <div class="alert alert-danger">
+                                No Assets in this department
+                            </div>
+                        {% endif %}
+            
+                       
+                        
+                    </table>
+
+
+           
+            
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock content %}

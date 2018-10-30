@@ -1,0 +1,61 @@
+{% extends "assetmanager/base.html" %}
+
+{% block content %}
+
+<h1>Departments</h1>
+
+<button class="btn btn-primary">Add Department</button>
+<br> <br>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        List of departments
+    </div>
+
+    <div class="panel-body">
+        <table class="table table-condenced">
+            
+            <th>Dep name</th>
+            <th>Dep Id</th>
+            <th>Dep Head</th>
+            <th>Date Created</th>
+            <th></th>
+            <tr>
+                <td>ICT</td>
+                <td>91817-FG</td>
+                <td>Malik</td>
+                <td>11 October, 2018</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-primary">Edit</button>
+                        
+                      </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>ICT</td>
+                <td>91817-FG</td>
+                <td>Malik</td>
+            </tr>
+            <tr>
+                <td>ICT</td>
+                <td>91817-FG</td>
+                <td>Malik</td>
+            </tr>
+            <tr>
+                <td>ICT</td>
+                <td>91817-FG</td>
+                <td>Malik</td>
+            </tr>
+            <tr>
+                <td>ICT</td>
+                <td>91817-FG</td>
+                <td>Malik</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+{% endblock content %}

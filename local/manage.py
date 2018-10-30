@@ -1,0 +1,1 @@
+/home/alby/Environments/assets/manage.py

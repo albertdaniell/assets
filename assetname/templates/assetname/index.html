@@ -1,0 +1,95 @@
+{% extends "assetmanager/base.html" %}
+
+{% block content %}
+<h1>Asset Type/ name ({{page_obj.paginator.count}})</h1>
+<hr>
+<a href="{% url 'assetname-create' %}" class="btn btn-info pull-right"> Add asset</a>
+<br><br> <br>
+<div class="col-sm-12" style="padding:0">
+    
+
+        
+        {% for assettype in assetname %}
+        <div class="col-sm-3" style="">
+            <a href="{% url 'assetname-detail' assettype.pk %}">
+        <div class="panel panel-default" id="my-panel">
+                <div class="panel-body">
+                    <div class="pull-left">
+                            <i class="fas fa-asterisk"></i>
+
+                    </div>
+
+                    <div class="pull-right">
+                            {{assettype.asset_type}}
+
+                    </div>
+                        
+                </div>
+
+               
+            </div>
+        </a>
+        </div>
+        {% endfor %}
+
+        <div class="pagination-field">
+                {% if is_paginated %}
+
+                {% if page_obj.has_previous %}
+                  <a class="btn btn-default mb-4" href="?page=1">First</a>
+                  <a class="btn btn-default mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                {% endif %}
+          
+                {% for num in page_obj.paginator.page_range %}
+                  {% if page_obj.number == num %}
+                    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                  {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a class="btn btn-default mb-4" href="?page={{ num }}">{{ num }}</a>
+                  {% endif %}
+                {% endfor %}
+          
+                {% if page_obj.has_next %}
+                  <a class="btn btn-default mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+                  <a class="btn btn-default mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+                {% endif %}
+          
+          {% endif %}
+</div>
+
+    
+</div>
+</div>
+<div class="col-sm-12">
+
+<h3>Description</h3>
+<hr>
+<p>In this section an admin gets to add the type of assets that will be stored in the organization</p>
+<p>Example: 
+
+    <ul>
+        <li>Desktop</li>
+        <li>Printer</li>
+        <li>Photocopier</li>
+        <li>UPS</li>
+    </ul>
+</p>
+
+<h3>Demo</h3>
+<hr>
+
+<form action="">
+    <div class="form-group">
+        <input type="text" class="form-control" disabled value="Desktop">
+    </div>
+
+    <div class="form-group">
+            <button class="btn btn-primary disabled">Add Asset</button>
+        </div>
+</form>
+
+
+</div>
+
+
+
+{% endblock content %}

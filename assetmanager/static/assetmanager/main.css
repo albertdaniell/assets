@@ -1,0 +1,541 @@
+#nav-bar {
+    position: fixed;
+    top: 0;
+    background: #0c6cb5;
+    z-index: 20;
+    width: 100%;
+    color: white;
+}
+
+#nav-user {
+    text-align: right;
+    padding: 2px;
+
+}
+
+#nav-links a{
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#nav-links a:hover{
+ background: black;
+}
+
+#nav-links {
+    text-align: right;
+
+ padding: 0px;
+}
+
+#nav-links a .badge{
+   background: orange;
+   border-radius: 50%;
+   padding: 5px;
+  
+}
+
+#dropdown-heading{
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    text-align: left;
+    background: #d1d1d1;
+}
+
+
+#dropdown{
+    background: white;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    margin: 65px 0px;
+    display: none;
+    min-width: 400px;
+    margin-left: -400px;
+    z-index: 10;
+    max-height: 500px;
+    overflow: auto;
+   
+    
+}
+
+#spandropdown{
+    position: relative;
+}
+
+#spandropdown:hover #dropdown{
+    display:inline-block;
+    background: white;
+}
+
+.dropdown-trigger:hover{
+    background: red;
+}
+
+#spandropdown:hover .dropdown-trigger{
+    background: black;
+    transform: scale(1.2);
+}
+
+#spandropdown:hover  #dropdown a{ 
+    
+}
+
+#dropdown a{
+   display: block;
+   text-align: left;
+   padding: 10px;
+   color: black;
+   background: white;
+  
+  
+}
+
+#dropdown a:hover{
+    background: #f1f1f1;
+   
+   
+ }
+
+
+#nav-user img {
+    height: 35px;
+    width: 35px;
+    padding: 1px;
+    border: 2px solid #1a2b38;
+    border-radius: 50%;
+}
+
+#profile-span {
+    display: inline-block;
+    padding: 10px;
+}
+
+#profile-span:hover {
+    background: #1a2b38;
+    cursor: pointer;
+}
+
+#login-div {
+    border: 1px solid #1a2b38;
+    color: white;
+    padding: 0;
+    margin: 100px 0px;
+    
+}
+
+#login-div #email,
+#pass {
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+    height: 50px;
+    font-size: 16px;
+}
+
+#pass {
+    border-radius: 0px;
+    background: transparent;
+    box-shadow: 0px 0px 0px transparent;
+}
+
+#login-div #email:active,
+#pass:active {
+
+
+    border: 2px solid #1a2b38;
+}
+
+#email :focus {
+    border: 2px solid #1a2b38;
+}
+
+
+#login-div #form-heading {
+    padding: 50px;
+    background: #1a2b38;
+    text-align: center;
+
+
+}
+
+#login-div form {
+    padding: 20px;
+}
+
+#login-div .btn {
+    border: 1px solid #1a2b38;
+    border-radius: 0px;
+    background: #1a2b38;
+    color: white;
+    min-width: 100px;
+    transition: .5s;
+}
+
+#mybtnprimary {
+    border: 1px solid #1a2b38;
+    border-radius: 0px;
+    background: #1a2b38;
+    color: white;
+    min-width: 100px;
+    transition: .5s;
+    border-radius: 2px;
+    letter-spacing: 1px;
+}
+
+#mybtnprimary:hover {
+    background: transparent;
+    color: black;
+}
+
+#login-div .btn:hover {
+    background: transparent;
+    color: black;
+}
+
+#login-div .btn:active {
+    letter-spacing: 3px;
+}
+
+#side-nav-div {
+    background-image: url('../img/1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    float: left;
+    padding: 0;
+    overflow: auto;
+}
+
+
+#right-side-div {
+    float: right;
+
+    transition: .5s;
+   margin-top: 80px;
+  
+   
+}
+
+body {
+   
+}
+
+#main {
+    background: white;
+    margin: 20px 0px;
+    border-radius: 4px;
+    padding: 0px;
+}
+
+#my-panel {
+    
+    margin: 10px 0px;
+    padding: 0px;
+/*    border-radius: 4px;*/
+    color: white;
+    font-weight: bold;
+}
+
+#my-panel #description {
+    text-align: right;
+    padding: 10px;
+
+}
+
+#my-panel #icon {
+/*    background: red;*/
+/*    margin-top: -10px;*/
+    min-height: 110px;
+    padding: 20px;
+    padding-top: 40px;
+    text-align: center;
+    align-content: center;
+    align-items: stretch;
+    display: flex;
+    font-size: 35px;
+    color: white;
+/*    min-height: 5px;*/
+}
+
+#my-panel #icon .fa{
+    background: #eceaea;
+    color: black;
+    padding: 20px;
+    margin-top: -60px;
+    position: absolute;
+    border-radius: 4px;
+    border: 5px solid #eceaea;
+}
+
+
+#panels-div {
+    padding: 0;
+}
+
+
+#side-nav a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    background: black;
+    opacity: .8;
+    margin: 2px 0px;
+}
+
+#side-nav a:hover {
+    background: #ccc;
+    color: red;
+    opacity: 1;
+    
+}
+
+#side-nav .fa {
+    margin: 0px 10px;
+
+}
+
+#side-nav {
+    margin-top: 59px;
+    
+}
+
+#side-nav .active {
+    background: #eceaea;
+    color: black;
+}
+
+#assets-dropdown a,#departments-dropdown a {
+    padding-right: ;
+    padding-left: 20px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 13px;
+}
+
+#welcome-note {
+    background: rgba(164, 243, 164, .79);
+    min-width: 150px;
+    max-width: 500px;
+    font-size: 15px;
+    min-height: 20px;
+    position: fixed;
+    z-index: 10;
+    right: 10px;
+    top: 70px;
+    padding: 10px;
+    display: none;
+    opacity: -1;
+    transition: 1s;
+    font-weight: bold;
+    font-style: italic;
+
+
+}
+
+#div-heading{
+    background: #0c6cb5;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    font-size:15px;
+}
+
+#credits{
+    color: orange;
+    padding: 10px;
+}
+
+#add-department-manager{
+    padding: 10px;
+}
+
+input[type="text"],#select-gender{
+    height: 50px;
+    border-radius: 0;
+}
+
+#legend{
+  font-size: 15px; 
+}
+
+#search-department-results-div{
+    background: #eee;
+    min-height: 150px;
+ padding: 10px;
+     max-height: 150px;
+    overflow: auto;
+}
+#search-department-results-div span{
+ display: block;
+    padding: 2px;
+}
+
+#search-department-results-div span:hover{
+  background: #ccc;
+    cursor: pointer;
+}
+
+#instruction-div{
+transition: .9s;
+}
+#instruction-div #div-heading{
+    background: #fff3b4;
+    color: black;
+}
+
+#instruction-child-div{
+background: white;
+}
+
+#close-instruction{
+    display: block;
+    
+}
+
+#close-instruction:hover{
+   cursor: pointer;
+    
+}
+
+#dm-div{
+    padding: 10px;
+    background: #f5f5f5;
+    margin: 20px 0px;
+}
+
+.desktopPanel{
+    background: #ff0080;
+}
+
+.laptopPanel{
+    background: #ff8f00;
+}
+
+.printerPanel{
+    background: #00a5a7;
+}
+
+
+.photocopyPanel{
+    background: #00a73c;
+}
+
+#activities p{
+    background: #5f5d5d;
+    margin: 10px 0px;
+    padding: 10px;
+    color: white;
+    border-radius: 4px;
+}
+
+.badge{
+   border-radius: 4px;
+}
+
+#dep-name{
+    background: transparent;
+    border: 1px solid orange;
+    padding: 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#dep-details{
+    
+    padding: 0px;
+    margin: 30px 0px;
+}
+#dep-details .badge{
+background: transparent;
+color: black;
+border: 1px solid #ccc;
+}
+
+
+.form-control,.textinput{
+    height: 45px;
+    border-radius: 0;
+}
+
+button[type='submit'],#cancelbtn{
+
+}
+
+#searchbox{
+    height: 40px;
+    border-radius: 4px;
+}
+.table{
+    font-size: 15px;
+    font-stretch: condensed;
+}
+
+blockquote{
+    margin: 20px 0px;
+}
+#my-panel{
+background: #ef6b6b;
+color: white;
+transition: .5s;
+}
+
+#my-panel:hover{
+    border: 1px solid #ef6b6b;
+    background: transparent;
+    color: black;
+}
+
+.panel .pull-right{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0px;
+    padding: 2px;
+}
+
+.panel .pull-left{
+    font-size: 25px;
+    
+    padding: 5px;
+    
+    border-radius: 4px;
+}
+@media(max-width:576px){
+    #side-nav{
+        display: none;
+    }
+    
+    #logo h3{
+        font-size: 15px;
+    }
+    
+    #right-side-div{
+        margin: 70px 0px;
+        transition: .5s;
+        width:100%;
+    }
+    
+    #welcome-note{
+        top: 50px;
+    }
+    
+    #profile-span{
+        display: none;
+    }
+}
+
+
